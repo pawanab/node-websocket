@@ -6,5 +6,5 @@ basic of webscoket, how to establish ws connection
 ### 1
 npm install
 
-###2
+### 2
 run command node server.js
