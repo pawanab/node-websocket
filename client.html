@@ -1,0 +1,18 @@
+<html>
+
+<script>
+    let ws = new WebSocket('ws://localhost:8000'); 
+    //logging the websocket property properties
+    console.log(ws);
+    //sending a message when connection opens
+    ws.onopen = (event) => ws.send("This is a message from client");
+    //receiving the message from server
+    ws.onmessage = (message) => document.getElementById('cmsg').innerHTML = message.data;
+</script>
+
+<body>
+    <h1>This is a client page</h1>
+    <div id='cmsg'> </div>
+</body>
+
+</html>
